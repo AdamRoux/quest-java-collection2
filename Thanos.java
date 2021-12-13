@@ -12,7 +12,7 @@ public class Thanos {
 			@Override
 			public int compare(Hero hero1, Hero hero2) {
 				// TODO Auto-generated method stub
-				return hero1.getName().compareTo(hero2.getName());
+				return hero2.getAge()-(hero1.getAge());
 			}
    		 
    	 };
@@ -29,7 +29,7 @@ public class Thanos {
 
 
         System.out.println("\nOrder by name:");
-        Collections.sort(heroes, ComparatorName);
+        Collections.sort(heroes);
         
         showList(heroes);
 
@@ -37,7 +37,7 @@ public class Thanos {
 
 
         System.out.println("\nOrder by age:");
-        Collections.sort(heroes);
+        Collections.sort(heroes, ComparatorName);
         showList(heroes);
     }
 
